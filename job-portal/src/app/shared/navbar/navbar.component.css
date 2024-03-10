@@ -1,0 +1,38 @@
+
+.navbar {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .navbar a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .navbar a:hover {
+    color: #ccc;
+  }
+  
+  .navbar-menu {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .navbar-start, .navbar-end {
+    display: flex;
+    align-items: center;
+  }
+  
+  .navbar-item {
+    margin-right: 20px;
+  }
+  
+  .navbar-item:last-child {
+    margin-right: 0;
+  }
+  
+  .navbar-brand {
+    font-size: 24px;
+  }

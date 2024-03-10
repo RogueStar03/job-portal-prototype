@@ -1,0 +1,27 @@
+/* company-list.component.css */
+.company-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .company-card {
+    width: 200px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .company-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+  }
+  
+  .company-card h3 {
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  

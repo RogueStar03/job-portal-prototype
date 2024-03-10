@@ -1,0 +1,35 @@
+<!-- job-details.component.html -->
+<div class="job-details">
+  <h2>{{ job?.title }}</h2>
+  <div class="details-container">
+    <div class="detail-row">
+      <div class="detail-label">Company:</div>
+      <div class="detail-value"><a [routerLink]="['/company-details', job!.company]" routerLinkActive="active">{{ job?.company }}</a></div>
+    </div>
+    <div class="detail-row">
+      <div class="detail-label">Job Type:</div>
+      <div class="detail-value">{{ job?.jobType }}</div>
+    </div>
+    <div class="detail-row">
+      <div class="detail-label">Location:</div>
+      <div class="detail-value">{{ job?.location }}</div>
+    </div>
+    <div class="detail-row">
+      <div class="detail-label">Work from Home:</div>
+      <div class="detail-value">{{ job?.wfh ? 'Yes' : 'No' }}</div>
+    </div>
+    <div class="detail-row">
+      <div class="detail-label">Job Description:</div>
+      <div class="detail-value">{{ job?.description }}</div>
+    </div>
+    <div class="detail-row">
+      <div class="detail-label">Work Hours:</div>
+      <div class="detail-value">{{ job?.workHours }}</div>
+    </div>
+    <div class="detail-row">
+      <div class="detail-label">Salary:</div>
+      <div class="detail-value">{{ job?.salary }}</div>
+    </div>
+  </div>
+  <button class="apply-button" (click)="applyForJob()">Apply</button>
+</div>

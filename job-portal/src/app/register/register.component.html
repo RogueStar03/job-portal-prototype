@@ -1,0 +1,72 @@
+<!-- register.component.html -->
+<div class="registration-container">
+  <h2>Register</h2>
+  <div class="form-group">
+    <label for="role">Select Role:</label>
+    <select id="role" [(ngModel)]="selectedRole" name="role" required>
+      <option value="" disabled>Select Role</option>
+      <option value="jobSeeker">Job Seeker</option>
+      <option value="company">Company</option>
+    </select>
+  </div>
+
+  <form *ngIf="selectedRole === 'jobSeeker'" (ngSubmit)="onJobSeekerSubmit()" #jobSeekerForm="ngForm">
+    <div class="form-group">
+      <label for="firstName">First Name:</label>
+      <input type="text" id="firstName" name="firstName" [(ngModel)]="jobSeeker.firstName" required>
+      <!-- <div *ngIf="!this.jobSeeker.firstName" class="error-message">First Name is required</div> -->
+    </div>
+
+    <div class="form-group">
+      <label for="middleName">Middle Name:</label>
+      <input type="text" id="middleName" name="middleName" [(ngModel)]="jobSeeker.middleName">
+    </div>
+
+    <div class="form-group">
+      <label for="lastName">Last Name:</label>
+      <input type="text" id="lastName" name="lastName" [(ngModel)]="jobSeeker.lastName" required>
+    </div>
+
+    <div class="form-group">
+      <label for="contactNo">Contact Number:</label>
+      <input type="text" id="contactNo" name="contactNo" [(ngModel)]="jobSeeker.contactNo" required>
+      <div *ngIf="contactError" class="error-message">Invalid Phone Number</div>
+    </div>
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" [(ngModel)]="jobSeeker.email" required>
+      <div *ngIf="emailError" class="error-message">Invalid email</div>
+    </div>
+    
+    <div class="form-group">
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" [(ngModel)]="jobSeeker.password" required>
+      <div *ngIf="passwordError" class="error-message">Password is required</div>
+    </div>
+    <button type="submit" >Register as Job Seeker</button>
+  </form>
+
+  <form *ngIf="selectedRole === 'company'" (ngSubmit)="onCompanySubmit()" #companyForm="ngForm">
+    <div class="form-group">
+      <label for="companyName">Company Name:</label>
+      <input type="text" id="companyName" name="companyName" [(ngModel)]="company.companyName" required>
+    </div>
+    <div class="form-group">
+      <label for="industry">Industry:</label>
+      <input type="text" id="industry" name="industry" [(ngModel)]="company.industry" required>
+    </div>
+    <div class="form-group">
+      <label for="contactNo">Contact Number:</label>
+      <input type="text" id="contactNo" name="contactNo" [(ngModel)]="company.contactNo" required pattern="[0-9]{10}">
+    </div>
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" [(ngModel)]="company.email" required>
+    </div>
+    <div class="form-group">
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" [(ngModel)]="company.password" required>
+    </div>
+    <button type="submit" [disabled]="companyForm.invalid">Register as Company</button>
+  </form>
+</div>

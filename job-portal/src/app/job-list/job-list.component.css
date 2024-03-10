@@ -1,0 +1,48 @@
+/* job-list.component.css */
+
+.job-list {
+    max-width: 800px;
+    margin: 20px auto;
+    font-family: Arial, sans-serif; /* Use the same font family as the navbar */
+  }
+  
+  .job-list h2 {
+    margin-bottom: 20px;
+  }
+  
+  .job-list ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .job-list li {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #f9f9f9;
+  }
+  
+  .job-list h3 {
+    margin-top: 0;
+    margin-bottom: 5px;
+  }
+  
+  .job-list p {
+    margin-bottom: 10px;
+  }
+  
+  .job-list button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .job-list button:hover {
+    background-color: #0056b3;
+  }
+  

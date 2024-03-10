@@ -1,0 +1,46 @@
+/* job-details.component.css */
+.job-details {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: Arial, sans-serif; /* Use the same font family as the navbar */
+  }
+  
+  .job-details h2 {
+    margin-top: 0;
+  }
+  
+  .details-container {
+    margin-top: 20px;
+  }
+  
+  .detail-row {
+    display: flex;
+    margin-bottom: 10px;
+  }
+  
+  .detail-label {
+    flex: 1;
+    font-weight: bold;
+  }
+  
+  .detail-value {
+    flex: 3;
+  }
+  
+  .apply-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .apply-button:hover {
+    background-color: #0056b3;
+  }
+  
